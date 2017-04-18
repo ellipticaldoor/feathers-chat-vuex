@@ -1,8 +1,8 @@
 import './chat.sass'
 
 import { mapState, mapGetters, mapActions } from 'vuex'
-import UserList from './components/users'
-import MessageList from './components/messages'
+import Users from './components/users'
+import Messages from './components/messages'
 
 export default {
 	name: 'chat-app',
@@ -52,5 +52,5 @@ export default {
 		})
 	},
 
-	components: { UserList, MessageList },
+	components: { Users, Messages },
 }

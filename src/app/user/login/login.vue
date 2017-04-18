@@ -3,10 +3,10 @@
 #login
 	h1 Welcome Back
 
-	.error(v-if='error') {{error.message}}
+	.error(v-if='error') {{ error.message }}
 		a.close(href='javascript://', @click.prevent='dismissError') dismiss
 
-	form.form(
+	form(
 		method='post',
 		@submit.prevent='onSubmit(email, password)',
 	)
@@ -18,7 +18,7 @@
 			v-model='email',
 		)
 
-		input.block(
+		input(
 			type='password',
 			name='password',
 			placeholder='password',

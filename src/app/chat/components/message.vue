@@ -1,17 +1,17 @@
 <template lang='pug'>
 
-.message.flex.flex-row
-	img.avatar(
+.message
+	.avatar(
 		:src='message.user.avatar || placeholder',
 		:alt='message.user.email'
 	)
 
 	.message-wrapper
-		p.message-header
-			span.username.font-600 {{ message.user.email }}
-			span.sent-date.font-300 {{ formattedDate }}
+		.message-header
+			span {{ message.user.email }}
+			span {{ formattedDate }}
 
-		p.message-content.font-300 {{ message.text }}
+		.message-content.font-300 {{ message.text }}
 
 </template>
 

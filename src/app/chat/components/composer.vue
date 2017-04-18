@@ -1,8 +1,8 @@
 <template lang='pug'>
 
-form#send-message.flex.flex-row.flex-space-between(v-on:submit.prevent='')
-	input.flex.flex-1(type='text', name='text', v-model='newMessage')
-	button.button-primary(type='submit', @click='addMessage') Send
+#send-message(v-on:submit.prevent='')
+	input(type='text', name='text', v-model='newMessage')
+	button(type='submit', @click='addMessage') Send
 
 </template>
 

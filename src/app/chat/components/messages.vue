@@ -1,13 +1,12 @@
 <template lang='pug'>
 
-.flex.flex-column.col.col-9
-	main.chat.flex.flex-column.flex-1.clear
-		single-message(
-			v-for='message in messages',
-			key='message._id',
-			:message='message',
-			v-cloak='',
-		)
+#messages
+	single-message(
+		v-for='message in messages',
+		key='message._id',
+		:message='message',
+		v-cloak='',
+	)
 
 	composeMessage(:createMessage='createMessage')
 
@@ -34,18 +33,9 @@ export default {
 		createMessage: Function,
 	},
 
-	methods: {
-		scrollToBottom() {
-			this.$nextTick(() => {
-				const node = this.$el.getElementsByClassName('chat')[0]
-				node.scrollTop = node.scrollHeight
-			})
-		},
-	},
-
 	watch: {
 		messages() {
-			this.messages.length && this.scrollToBottom()
+			this.messages.length
 		},
 	},
 
