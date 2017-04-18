@@ -8,11 +8,10 @@ import '@/api/feathers-client'
 
 window.store = store
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App }
+	el: '#app',
+	router,
+	store,
+	template: '<App/>',
+	components: { App },
 })
