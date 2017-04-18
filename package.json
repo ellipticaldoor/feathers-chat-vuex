@@ -19,7 +19,6 @@
     "feathers-reactive": "^0.4.1",
     "feathers-socketio": "^1.5.2",
     "feathers-vuex": "^0.0.4",
-    "getbase": "^3.2.2",
     "milligram": "^1.3.0",
     "node-sass": "^4.5.2",
     "normalize": "^0.3.1",

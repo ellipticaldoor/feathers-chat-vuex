@@ -1,7 +1,10 @@
 <template lang='pug'>
 
-main#app
-	router-view
+#app
+	//- navbar(:navbar='navbar')
+
+	#app_content
+		router-view.view
 
 </template>
 
