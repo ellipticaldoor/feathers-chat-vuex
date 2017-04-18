@@ -17,6 +17,8 @@ aside.sidebar.col.col-3.flex.flex-column.flex-space-between
 </template>
 
 <script>
+import './users.sass'
+
 export default {
 	name: 'user-list',
 	computed: {
@@ -30,51 +32,3 @@ export default {
 	},
 }
 </script>
-
-<style>
-aside.sidebar {
-	background: #f8f8f8;
-	max-width: 340px;
-	padding: 15px;
-	border-right: 1px solid #f1f1f1;
-}
-
-aside.sidebar .online-count {
-	color: #31D8A0;
-	margin-right: 5px;
-}
-
-aside.sidebar h4 {
-	margin: 0 0 20px 0;
-	color: #C3C3C3;
-}
-
-aside.sidebar .user-list {
-	overflow-y: scroll;
-}
-
-aside.sidebar li {
-	margin: 15px 0;
-}
-
-aside.sidebar li > a {
-	color: #555555;
-}
-
-aside.sidebar li > a:hover > span,
-aside.sidebar li > a:focus > span, {
-	color: #31D8A0;
-}
-
-aside.sidebar img.avatar {
-	border-radius: 100%;
-	height: 45px;
-	width: 45px;
-	margin-right: 10px;
-}
-
-aside.sidebar .username {
-	position: absolute;
-	line-height: 45px;
-}
-</style>
