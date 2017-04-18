@@ -1,27 +1,24 @@
-<template>
-	<main id="chat" class="flex flex-column">
-		<header class="title-bar flex flex-row flex-center">
-			<div class="title-wrapper block center-element">
-				<img class="logo" src="http://feathersjs.com/img/feathers-logo-wide.png" alt="Feathers Logo">
-				<span class="title">Chat</span>
-			</div>
-		</header>
-		<div class="flex flex-row flex-1 clear" v-if="user">
+<template lang='pug'>
 
-			<user-list :users="users"
-				:logout="logout" />
+#chat.flex.flex-column
+	header.title-bar.flex.flex-row.flex-center
+		.title-wrapper.block.center-element
+			img.logo(src="http://feathersjs.com/img/feathers-logo-wide.png")
 
-			<message-list :messages="messages.data"
-				:findMessages="findUsers"
-				:createMessage="createMessage" />
-		</div>
-	</main>
+	.flex.flex-row.flex-1.clear(v-if="user")
+		user-list(:users="users", :logout="logout")
+		message-list(
+			:messages="messages.data",
+			:findMessages="findUsers",
+			:createMessage="createMessage"
+		)
+
 </template>
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-import UserList from './Users'
-import MessageList from './Messages'
+import UserList from './users'
+import MessageList from './messages'
 
 export default {
 	name: 'chat-app',
@@ -77,7 +74,7 @@ export default {
 </script>
 
 <style scoped>
-main#chat {
+#chat {
 	height: 100%;
 }
 

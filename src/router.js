@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Login from '@/components/Login'
-import Signup from '@/components/Signup'
-import Chat from '@/components/Chat/Chat'
+import Home from './app/views/home.vue'
+import Login from './app/views/login.vue'
+import Signup from './app/views/signup.vue'
+import Chat from './app/common/chat/chat.vue'
 
 Vue.use(Router)
 

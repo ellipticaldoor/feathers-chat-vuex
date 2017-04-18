@@ -1,4 +1,4 @@
-<template>
+<template lang='pug'>
 	<form class="flex flex-row flex-space-between" id="send-message" v-on:submit.prevent>
 		<input type="text" name="text" class="flex flex-1" v-model="newMessage">
 		<button class="button-primary" type="submit" @click="addMessage">Send</button>
@@ -19,12 +19,10 @@ export default {
 	methods: {
 		addMessage() {
 			// Create a new message and then clear the input field
-			this.createMessage({ text: this.newMessage }).then(
-				this.clearMessage
-			)
-		},
-		clearMessage() {
-			this.newMessage = ''
+			this.createMessage({ text: this.newMessage })
+
+			// Clears message
+			.then(this.newMessage = '')
 		},
 	},
 }

@@ -1,12 +1,5 @@
-<template>
-	<main id="app">
-		<router-view></router-view>
-	</main>
-</template>
-
-<script>
 import 'getbase/dist/css/styles.css'
-import './styles/chat.css'
+import '../styles/chat.css'
 
 export default {
 	name: 'app',
@@ -30,12 +23,3 @@ export default {
 		})
 	},
 }
-
-</script>
-
-<style>
-#app {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-</style>

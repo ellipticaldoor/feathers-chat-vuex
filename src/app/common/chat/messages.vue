@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import ComposeMessage from './Composer.vue'
-import SingleMessage from './Message.vue'
+import ComposeMessage from './composer.vue'
+import SingleMessage from './message.vue'
 
 export default {
 	name: 'message-list',
