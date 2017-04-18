@@ -1,10 +1,16 @@
-<template>
-	<div class="flex flex-column col col-9">
-		<main class="chat flex flex-column flex-1 clear">
-			<single-message v-for="message in messages" key="message._id" :message="message" v-cloak />
-		</main>
-		<ComposeMessage :createMessage="createMessage" />
-	</div>
+<template lang='pug'>
+
+.flex.flex-column.col.col-9
+	main.chat.flex.flex-column.flex-1.clear
+		single-message(
+			v-for='message in messages',
+			key='message._id',
+			:message='message',
+			v-cloak=''
+		)
+
+	composemessage(:createmessage='createMessage')
+
 </template>
 
 <script>

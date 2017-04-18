@@ -3,22 +3,22 @@
 #chat.flex.flex-column
 	header.title-bar.flex.flex-row.flex-center
 		.title-wrapper.block.center-element
-			img.logo(src="http://feathersjs.com/img/feathers-logo-wide.png")
+			img.logo(src='http://feathersjs.com/img/feathers-logo-wide.png')
 
-	.flex.flex-row.flex-1.clear(v-if="user")
-		user-list(:users="users", :logout="logout")
+	.flex.flex-row.flex-1.clear(v-if='user')
+		user-list(:users='users', :logout='logout')
 		message-list(
-			:messages="messages.data",
-			:findMessages="findUsers",
-			:createMessage="createMessage"
+			:messages='messages.data',
+			:findMessages='findUsers',
+			:createMessage='createMessage'
 		)
 
 </template>
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-import UserList from './users'
-import MessageList from './messages'
+import UserList from './components/users'
+import MessageList from './components/messages'
 
 export default {
 	name: 'chat-app',
