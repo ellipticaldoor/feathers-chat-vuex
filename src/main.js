@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import store from './store/'
-import '@/api/feathers-client'
+import store from './store'
+import './feathers'
 
 window.store = store
 
