@@ -1,5 +1,5 @@
 import 'getbase/dist/css/styles.css'
-import '../styles/chat.css'
+import '../styles/chat.sass'
 
 export default {
 	name: 'app',
