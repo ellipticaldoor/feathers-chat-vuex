@@ -6,7 +6,7 @@
 			v-for='message in messages',
 			key='message._id',
 			:message='message',
-			v-cloak=''
+			v-cloak='',
 		)
 
 	composemessage(:createmessage='createMessage')

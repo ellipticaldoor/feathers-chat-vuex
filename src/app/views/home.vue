@@ -1,31 +1,26 @@
-<template>
-	<main class="home container">
-		<div class="row">
-			<div class="col-12 col-8-tablet push-2-tablet text-center">
-				<img class="logo center-item"
-					src="http://feathersjs.com/img/feathers-logo-wide.png"
-					alt="Feathers Logo">
-				<h3 class="title">Chat</h3>
-			</div>
-		</div>
+<template lang='pug'>
 
-		<div class="row">
-			<div class="col-12 push-4-tablet col-4-tablet">
-				<div class="row">
-					<div class="col-12">
-						<router-link as="a" :to="{name: 'Login'}" class="button button-primary block login">Login</router-link>
-					</div>
-				</div>
+main.home.container
+	.row
+		.col-12.col-8-tablet.push-2-tablet.text-center
+			h3.title Chat
 
-				<div class="row">
-					<div class="col-12">
-						<router-link as="a" :to="{name: 'Signup'}" class="button button-primary block signup">Signup</router-link>
-					</div>
-				</div>
-			</div>
-		</div>
+	.row
+		.col-12.push-4-tablet.col-4-tablet
+			.row
+				.col-12
+					router-link.button.button-primary.block.login(
+						as='a',
+						:to="{name: 'Login'}"
+					) Login
 
-	</main>
+			.row
+				.col-12
+					router-link.button.button-primary.block.signup(
+						as='a',
+						:to="{name: 'Signup'}"
+					) Signup
+
 </template>
 
 <script>
