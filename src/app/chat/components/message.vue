@@ -20,6 +20,7 @@ import dateFns from 'date-fns'
 
 export default {
 	props: ['message', 'index'],
+
 	computed: {
 		formattedDate() {
 			return dateFns.format(this.message.createdAt, 'MMM Do, hh:mm:ss')

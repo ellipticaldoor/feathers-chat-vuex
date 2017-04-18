@@ -9,14 +9,17 @@ form#send-message.flex.flex-row.flex-space-between(v-on:submit.prevent='')
 <script>
 export default {
 	name: 'MessageComposer',
+
 	data() {
 		return {
 			newMessage: '',
 		}
 	},
+
 	props: {
 		createMessage: Function,
 	},
+
 	methods: {
 		addMessage() {
 			// Create a new message and then clear the input field
